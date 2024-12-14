@@ -1,0 +1,11 @@
+/* src/pages/blank/blank.css */
+.blank-container {
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .blank-container h1 {
+    color: #333;
+  }
+  
