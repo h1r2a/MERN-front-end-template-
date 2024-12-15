@@ -5,6 +5,8 @@
   left: -250px;
   width: 250px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-color); /* Arrière-plan noir */
   color: var(--secondary-color); /* Texte blanc */
   transition: left 0.3s ease;
@@ -17,12 +19,14 @@
 }
 
 .sidebar-toggle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  flex-basis: 8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .close-btn {
+  margin-right: 20px;
   font-size: 30px;
   background: transparent;
   border: none;

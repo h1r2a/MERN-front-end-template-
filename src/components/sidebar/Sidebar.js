@@ -11,6 +11,12 @@ const Sidebar = () => {
       <div className="sidebar-toggle">
         <button className="close-btn" onClick={closeSidebar}>X</button>
       </div>
+      <div className="sidebar-logo">
+
+      </div>
+      <div className="sidebar-menu">
+        
+      </div>
     </div>
   );
 };
