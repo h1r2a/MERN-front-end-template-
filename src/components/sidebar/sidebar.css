@@ -1,52 +1,54 @@
 /* src/components/sidebar/sidebar.css */
 .sidebar {
-    position: absolute;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #333;
-    color: white;
-    transition: left 0.3s ease;
-  }
-  
-  .sidebar.open {
-    left: 0;
-  }
-  
-  .sidebar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .close-btn {
-    font-size: 30px;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-  }
-  
-  .sidebar-nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar-nav ul li a {
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .sidebar-nav ul li a:hover {
-    background-color: #555;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--primary-color); /* Arrière-plan noir */
+  color: var(--secondary-color); /* Texte blanc */
+  transition: left 0.3s ease;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3); /* Ombre pour souligner la séparation */
+  z-index: 10; /* Assure que le sidebar est au-dessus du header */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: var(--secondary-color); /* Texte blanc */
+  cursor: pointer;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav ul li a {
+  padding: 10px;
+  color: var(--secondary-color); /* Texte blanc */
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar-nav ul li a:hover {
+  background-color: var(--gray-dark); /* Couleur de survol gris foncé */
+  border-radius: 5px; /* Ajout de coins arrondis au survol */
+}

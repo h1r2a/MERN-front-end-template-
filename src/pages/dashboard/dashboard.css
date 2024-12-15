@@ -1,11 +1,11 @@
 /* src/pages/dashboard/dashboard.css */
 .dashboard-container {
-    padding: 20px;
-    background-color: #f4f4f9;
-    text-align: center;
-  }
-  
-  .dashboard-container h1 {
-    color: #333;
-  }
-  
+  padding: 20px;
+  background-color: var(--secondary-color); /* Arrière-plan blanc */
+  text-align: center;
+  font-family: var(--font-family); /* Utilisation de la police Outfit */
+}
+
+.dashboard-container h1 {
+  color: var(--gray-dark); /* Texte gris foncé */
+}

@@ -11,13 +11,6 @@ const Sidebar = () => {
       <div className="sidebar-toggle">
         <button className="close-btn" onClick={closeSidebar}>X</button>
       </div>
-      <nav className={`sidebar-nav ${isSidebarOpen ? 'open' : ''}`}>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Profile</a></li>
-        </ul>
-      </nav>
     </div>
   );
 };

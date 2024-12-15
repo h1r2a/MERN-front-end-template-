@@ -1,6 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    /* Primary Colors */
+    --primary-color: #000000; /* Noir */
+    --secondary-color: #ffffff; /* Blanc */
+    
+    /* Neutral Tones */
+    --gray-light: #f5f5f5; /* Gris clair pour les arrière-plans */
+    --gray-dark: #333333; /* Gris foncé pour les textes */
+    
+    /* Accent Color (Optional) */
+    --accent-color: #e0e0e0; /* Couleur d'accent douce, si nécessaire */
+    
+    /* Font */
+    --font-family: 'Outfit', sans-serif;
+}

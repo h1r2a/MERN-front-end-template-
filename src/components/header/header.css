@@ -1,36 +1,37 @@
 /* src/components/header/header.css */
 
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-  }
-  
-  .burger-menu {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .burger-btn {
-    font-size: 30px;
-    background: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-  }
-  
-  .logo-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color); /* Arrière-plan noir */
+  color: var(--secondary-color); /* Texte blanc */
+  padding: 10px 20px;
+  font-family: var(--font-family); /* Utilisation de la police Outfit */
+}
+
+.burger-menu {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.burger-btn {
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  color: var(--secondary-color); /* Texte blanc */
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.logo-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--secondary-color); /* Texte blanc */
+}

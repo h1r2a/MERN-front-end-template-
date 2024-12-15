@@ -1,31 +1,22 @@
-/* src/App.css */
-
 .main {
     height: 100vh;
     width: 100vw;
-    background: beige;
+    background: var(--gray-light); /* Arrière-plan clair */
     display: flex;
     flex-direction: column;
-  }
-  
-  .header-container {
+    font-family: var(--font-family); /* Utilisation de la police Outfit */
+}
+
+.header-container {
     flex-basis: 8%;
-  }
-  
-  .main-content {
+    background: var(--primary-color); /* Arrière-plan noir */
+    color: var(--secondary-color); /* Texte blanc */
+}
+
+.main-content {
     flex-grow: 1;
     padding: 20px;
     overflow-y: auto;
-  }
-  
-  /* .sidebar-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    background: #f4f4f4;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-   */
+    background: var(--secondary-color); /* Arrière-plan blanc */
+    color: var(--gray-dark); /* Texte gris foncé */
+}
