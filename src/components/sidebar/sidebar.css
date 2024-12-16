@@ -1,4 +1,4 @@
-/* src/components/sidebar/sidebar.css */
+/* Sidebar styles */
 .sidebar {
   position: absolute;
   top: 0;
@@ -7,7 +7,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--primary-color); /* Arrière-plan noir */
+  background-color: var(--primary-color);
   color: var(--secondary-color); /* Texte blanc */
   transition: left 0.3s ease;
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3); /* Ombre pour souligner la séparation */
@@ -34,25 +34,144 @@
   cursor: pointer;
 }
 
-.sidebar-nav {
+.sidebar-logo {
+  flex-basis: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-menu {
+  flex-basis: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  gap: 10px;
 }
 
-.sidebar-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-nav ul li a {
-  padding: 10px;
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1); /* Légère transparence */
   color: var(--secondary-color); /* Texte blanc */
-  text-decoration: none;
-  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.sidebar-nav ul li a:hover {
-  background-color: var(--gray-dark); /* Couleur de survol gris foncé */
-  border-radius: 5px; /* Ajout de coins arrondis au survol */
+.nav-item:hover {
+  background-color: var(--gray-dark); /* Fond plus foncé au survol */
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4); /* Ajout d'une ombre */
+  border-color: var(--secondary-color); /* Accentuation de la bordure */
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  flex-basis: 80%;
+}
+
+/* Dropdown styles */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px; /* Indentation pour les items du dropdown */
+}
+
+/* Style pour l'icône du dropdown */
+.dropdown-icon {
+  font-size: 1.2rem;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon:hover {
+  color: var(--secondary-color);
+}
+
+/* Styles pour les items du menu du dropdown (enfants) */
+.dropdown .nav-item {
+  padding: 6px 15px; /* Réduire l'espacement pour rendre l'élément plus petit */
+  font-size: 0.8rem; /* Taille du texte plus petite */
+  background-color: rgba(255, 255, 255, 0.05); /* Fond presque transparent */
+  border-radius: 5px;
+  color: var(--tertiary-color); /* Utilise une couleur différente pour les sous-routes */
+  transition: background-color 0.3s ease;
+  height: 40px; /* Hauteur plus petite pour les sous-routes */
+}
+
+.dropdown .nav-item:hover {
+  background-color: var(--gray-dark); /* Fond gris foncé au survol */
+  box-shadow: none; /* Pas d'ombre pour les sous-routes */
+}
+
+.dropdown .nav-item .nav-icon {
+  font-size: 1.2rem; /* Légèrement plus petit pour les icônes des sous-routes */
+}
+
+.dropdown .nav-item .nav-label {
+  font-size: 0.8rem; /* Réduire la taille du texte dans les sous-routes */
+  color: var(--tertiary-color); /* Une couleur différente pour les sous-routes */
+}
+
+/* Add this to sidebar.css */
+.nav-item.active {
+  background-color: var(--active-bg-color); /* Set active background color */
+  color: var(--active-text-color); /* Set active text color */
+  font-weight: bold; /* Make the text bold for active items */
+  border-left: 4px solid var(--active-border-color); /* Add left border to highlight active state */
+}
+
+.nav-item.active .nav-icon, .nav-item.active .nav-label {
+  font-weight: bold; /* Make the text bold for active items */
+}
+
+/* Additional active styles for the dropdown parent item */
+.nav-item.active .dropdown-icon {
+  transform: rotate(180deg); /* Rotate the dropdown icon when active */
+  color: var(--active-text-color); /* Set icon color when active */
+}
+
+/* Styling for child items (active state) */
+.dropdown .nav-item.active {
+  background-color: var(--active-bg-color); /* Set active background for children */
+  color: var(--active-text-color); /* Active text color */
+  font-weight: bold; /* Bold text for active child */
+  border-left: 4px solid var(--active-border-color); /* Left border for active child */
+}
+
+/* Optional: Adding styles to differentiate parent active items */
+.nav-item.active {
+  background-color: var(--parent-active-bg-color); /* Parent active background */
+}
+
+.nav-item .dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.sidebar .dropdown.open .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Style for active parent when the dropdown is open */
+.nav-item.active .dropdown {
+  background-color: var(--parent-dropdown-bg); /* Change dropdown background */
+}
+
+/* Adjust for better accessibility */
+.nav-item.active, .dropdown .nav-item.active {
+  padding-left: 20px; /* Slight indentation for active items */
 }
